@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1148" y="25"/>
         </scene>
-        <!--View Controller-->
+        <!--Core Location View Controller-->
         <scene sceneID="q5Q-n2-6t4">
             <objects>
-                <viewController id="rbZ-24-NN0" sceneMemberID="viewController">
+                <viewController id="rbZ-24-NN0" customClass="CoreLocationViewController" customModule="DeviceFrameworksDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b4v-Xr-yEp"/>
                         <viewControllerLayoutGuide type="bottom" id="KWb-1N-G3N"/>
