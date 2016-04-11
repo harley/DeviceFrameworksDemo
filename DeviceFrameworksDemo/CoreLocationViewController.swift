@@ -8,10 +8,12 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class CoreLocationViewController: UIViewController {
     lazy var locationManager = CLLocationManager()
 
+    @IBOutlet var mapView: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +39,9 @@ extension CoreLocationViewController: CLLocationManagerDelegate {
 
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-//            let span = MKCoordinateSpanMake(0.1, 0.1)
-//            let region = MKCoordinateRegionMake(location.coordinate, span)
-//            mapView.setRegion(region, animated: false)
+            let span = MKCoordinateSpanMake(0.1, 0.1)
+            let region = MKCoordinateRegionMake(location.coordinate, span)
+            mapView.setRegion(region, animated: false)
             print("location ", location)
         }
     }

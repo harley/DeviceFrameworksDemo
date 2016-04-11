@@ -16,20 +16,25 @@
                         <sections>
                             <tableViewSection id="Oq0-ev-faH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tyR-1W-Kuv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" id="tyR-1W-Kuv">
                                         <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tyR-1W-Kuv" id="Kj5-gS-Ngl">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Core Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwU-gH-Q8U">
-                                                    <rect key="frame" x="8" y="11" width="107" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoreLocation &amp; MapKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwU-gH-Q8U">
+                                                    <rect key="frame" x="8" y="8" width="177" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PwU-gH-Q8U" firstAttribute="top" secondItem="Kj5-gS-Ngl" secondAttribute="top" constant="8" id="FuT-MP-EcU"/>
+                                                <constraint firstItem="PwU-gH-Q8U" firstAttribute="leading" secondItem="Kj5-gS-Ngl" secondAttribute="leading" constant="8" id="Jac-uv-FYY"/>
+                                                <constraint firstAttribute="bottom" secondItem="PwU-gH-Q8U" secondAttribute="bottom" constant="8" id="m1A-ew-0qE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="rbZ-24-NN0" kind="show" id="G0c-fV-MDS"/>
@@ -77,9 +82,23 @@
                     <view key="view" contentMode="scaleToFill" id="NnG-gv-Xi4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9k-jJ-MiG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i9k-jJ-MiG" secondAttribute="trailing" id="0lD-7O-IyU"/>
+                            <constraint firstItem="i9k-jJ-MiG" firstAttribute="leading" secondItem="NnG-gv-Xi4" secondAttribute="leading" id="OzD-zR-rj0"/>
+                            <constraint firstItem="i9k-jJ-MiG" firstAttribute="top" secondItem="NnG-gv-Xi4" secondAttribute="top" id="aMa-u1-gax"/>
+                            <constraint firstItem="KWb-1N-G3N" firstAttribute="top" secondItem="i9k-jJ-MiG" secondAttribute="bottom" id="lI4-UV-j7t"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="i9k-jJ-MiG" id="Qmy-d8-Ltl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weL-QB-L02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
