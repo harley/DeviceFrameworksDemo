@@ -15,6 +15,7 @@
 		E2C6712B1CBB83EF00DD519E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C6712A1CBB83EF00DD519E /* CoreLocation.framework */; };
 		E2C6712D1CBB89A600DD519E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C6712C1CBB89A600DD519E /* MapKit.framework */; };
 		E2C6712F1CBB8B8E00DD519E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C6712E1CBB8B8E00DD519E /* CameraViewController.swift */; };
+		E2C671311CBB941D00DD519E /* AVFoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C671301CBB941D00DD519E /* AVFoundationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E2C6712A1CBB83EF00DD519E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E2C6712C1CBB89A600DD519E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E2C6712E1CBB8B8E00DD519E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		E2C671301CBB941D00DD519E /* AVFoundationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				E2C671211CBB80B400DD519E /* LaunchScreen.storyboard */,
 				E2C671241CBB80B400DD519E /* Info.plist */,
 				E2C6712E1CBB8B8E00DD519E /* CameraViewController.swift */,
+				E2C671301CBB941D00DD519E /* AVFoundationViewController.swift */,
 			);
 			path = DeviceFrameworksDemo;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C671311CBB941D00DD519E /* AVFoundationViewController.swift in Sources */,
 				E2C6711B1CBB80B400DD519E /* CoreLocationViewController.swift in Sources */,
 				E2C671191CBB80B400DD519E /* AppDelegate.swift in Sources */,
 				E2C6712F1CBB8B8E00DD519E /* CameraViewController.swift in Sources */,

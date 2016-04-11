@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Device Frameworks-->
@@ -70,7 +71,22 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GuU-NE-b1e" id="rjX-ty-rPB">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVFoundation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-J7-6By">
+                                                    <rect key="frame" x="8" y="11" width="107" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Ba-J7-6By" firstAttribute="leading" secondItem="rjX-ty-rPB" secondAttribute="leadingMargin" id="7M0-45-HX8"/>
+                                                <constraint firstItem="6Ba-J7-6By" firstAttribute="centerY" secondItem="rjX-ty-rPB" secondAttribute="centerY" id="tY9-Vl-zL9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Zx4-pd-xqY" kind="show" id="xQZ-7O-JVy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -119,6 +135,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weL-QB-L02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1556" y="-71"/>
+        </scene>
+        <!--Foundation View Controller-->
+        <scene sceneID="dXG-m5-OLz">
+            <objects>
+                <viewController id="Zx4-pd-xqY" customClass="AVFoundationViewController" customModule="DeviceFrameworksDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hTV-az-Jdm"/>
+                        <viewControllerLayoutGuide type="bottom" id="jnP-c9-sjb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WhB-z5-bIX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-Ib-2y8">
+                                <rect key="frame" x="0.0" y="64" width="320" height="384"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6ni-yH-GQq">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bc4-By-GGv">
+                                <rect key="frame" x="0.0" y="448" width="320" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFP-4o-Yli">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="120"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Capture"/>
+                                        <connections>
+                                            <action selector="takeButtonDidTap:" destination="Zx4-pd-xqY" eventType="touchUpInside" id="Aqt-Kt-vlM"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-LL-OYi">
+                                        <rect key="frame" x="230" y="0.0" width="90" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="Gcy-nT-tDr"/>
+                                            <constraint firstAttribute="height" constant="120" id="mBB-gn-dH2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wFP-4o-Yli" secondAttribute="bottom" id="1xF-hG-lR7"/>
+                                    <constraint firstAttribute="height" constant="120" id="Ebh-R5-ohX"/>
+                                    <constraint firstItem="wFP-4o-Yli" firstAttribute="top" secondItem="bc4-By-GGv" secondAttribute="top" id="ru5-s2-MvZ"/>
+                                    <constraint firstItem="wFP-4o-Yli" firstAttribute="leading" secondItem="bc4-By-GGv" secondAttribute="leading" id="tAd-tk-rcx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1xF-hG-lR7"/>
+                                        <exclude reference="ru5-s2-MvZ"/>
+                                        <exclude reference="tAd-tk-rcx"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bc4-By-GGv" firstAttribute="leading" secondItem="WhB-z5-bIX" secondAttribute="leading" id="1PU-04-mL4"/>
+                            <constraint firstItem="Oem-Ib-2y8" firstAttribute="leading" secondItem="WhB-z5-bIX" secondAttribute="leading" id="6Jl-gi-Qhi"/>
+                            <constraint firstItem="Oem-Ib-2y8" firstAttribute="top" secondItem="hTV-az-Jdm" secondAttribute="bottom" id="DiL-nH-IPN"/>
+                            <constraint firstAttribute="trailing" secondItem="bc4-By-GGv" secondAttribute="trailing" id="Rwl-bF-sUT"/>
+                            <constraint firstItem="bc4-By-GGv" firstAttribute="top" secondItem="Oem-Ib-2y8" secondAttribute="bottom" id="VU5-aD-uLg"/>
+                            <constraint firstAttribute="trailing" secondItem="Oem-Ib-2y8" secondAttribute="trailing" id="e3M-hk-bCh"/>
+                            <constraint firstItem="jnP-c9-sjb" firstAttribute="top" secondItem="bc4-By-GGv" secondAttribute="bottom" id="ths-3q-wmv"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="captureImageView" destination="Clc-LL-OYi" id="TEK-Wx-4AP"/>
+                        <outlet property="previewView" destination="6ni-yH-GQq" id="8RK-fY-Va1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHu-cg-qKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="723"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="naA-rb-XN0">
