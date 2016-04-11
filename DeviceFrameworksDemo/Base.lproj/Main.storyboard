@@ -26,7 +26,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoreLocation &amp; MapKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwU-gH-Q8U">
-                                                    <rect key="frame" x="8" y="8" width="177" height="27.5"/>
+                                                    <rect key="frame" x="8" y="11.5" width="177" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -36,7 +36,14 @@
                                                 <constraint firstItem="PwU-gH-Q8U" firstAttribute="top" secondItem="Kj5-gS-Ngl" secondAttribute="top" constant="8" id="FuT-MP-EcU"/>
                                                 <constraint firstItem="PwU-gH-Q8U" firstAttribute="leading" secondItem="Kj5-gS-Ngl" secondAttribute="leading" constant="8" id="Jac-uv-FYY"/>
                                                 <constraint firstAttribute="bottom" secondItem="PwU-gH-Q8U" secondAttribute="bottom" constant="8" id="m1A-ew-0qE"/>
+                                                <constraint firstItem="PwU-gH-Q8U" firstAttribute="centerY" secondItem="Kj5-gS-Ngl" secondAttribute="centerY" id="qKG-Q1-tho"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="FuT-MP-EcU"/>
+                                                    <exclude reference="m1A-ew-0qE"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="rbZ-24-NN0" kind="show" id="G0c-fV-MDS"/>
@@ -80,9 +87,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6Ba-J7-6By" firstAttribute="leading" secondItem="rjX-ty-rPB" secondAttribute="leadingMargin" id="7M0-45-HX8"/>
+                                                <constraint firstItem="6Ba-J7-6By" firstAttribute="leading" secondItem="rjX-ty-rPB" secondAttribute="leadingMargin" constant="8" id="7M0-45-HX8"/>
+                                                <constraint firstItem="6Ba-J7-6By" firstAttribute="leading" secondItem="rjX-ty-rPB" secondAttribute="leading" constant="8" id="baJ-ou-4ub"/>
                                                 <constraint firstItem="6Ba-J7-6By" firstAttribute="centerY" secondItem="rjX-ty-rPB" secondAttribute="centerY" id="tY9-Vl-zL9"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="7M0-45-HX8"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Zx4-pd-xqY" kind="show" id="xQZ-7O-JVy"/>
